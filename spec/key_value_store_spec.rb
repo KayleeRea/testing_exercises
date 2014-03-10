@@ -11,10 +11,11 @@ describe KeyValueStore do
 
   expected = {"Flash" => "Dog"}
 
-  actual = keyvalue.hashify
+  actual = keyvalue.add
 
   expect(actual).to eq expected
 
   end
+  
 
 end
