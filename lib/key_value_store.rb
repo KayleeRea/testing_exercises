@@ -5,7 +5,7 @@ class KeyValueStore
   end
 
   def add (key, value)
-    @store [key]= [value]
+    @store [key]= value
   end
 
   def get(key)
@@ -14,5 +14,9 @@ class KeyValueStore
 
   def delete(key)
     @store.delete(key)
+  end
+
+  def return
+    @store
   end
 end

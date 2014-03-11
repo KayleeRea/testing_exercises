@@ -8,7 +8,7 @@ describe KeyValueStore do
 
     keyvalue.add("Flash", "Dog")
 
-    expected_value = ["Dog"]
+    expected_value = "Dog"
     actual_value = keyvalue.get("Flash")
 
     expect(actual_value).to eq expected_value
@@ -26,5 +26,20 @@ describe KeyValueStore do
     actual_value = keyvalue.delete("Flash")
 
     expect(actual_value).to eq expected_value
-    end
+  end
+
+  it "Allows user to add keys to the store" do
+    keyvalue = KeyValueStore.new
+
+    keyvalue.add("Flash", "Dog")
+    keyvalue.add("Fluffy", "Cat")
+    keyvalue.add("Kaylee", "Person")
+
+    expected_value = {"Flash" => "Dog",
+    "Fluffy" => "Cat",
+    "Kaylee" => "Person"}
+    actual_value = keyvalue.return
+
+    expect(actual_value).to eq expected_value
+  end
 end
