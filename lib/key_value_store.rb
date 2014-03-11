@@ -19,4 +19,8 @@ class KeyValueStore
   def return
     @store
   end
+
+  def get_keys
+    @store.keys
+  end
 end

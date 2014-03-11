@@ -41,7 +41,18 @@ describe KeyValueStore do
     actual_value = keyvalue.return
 
     expect(actual_value).to eq expected_value
+  end
 
-    
+  it"Returns a list of keys from the store" do
+    keyvalue = KeyValueStore.new
+
+    keyvalue.add("Flash", "Dog")
+    keyvalue.add("Fluffy", "Cat")
+    keyvalue.add("Kaylee", "Person")
+
+    expected_value = ["Flash", "Fluffy", "Kaylee"]
+    actual_value = keyvalue.get_keys
+
+    expect(actual_value).to eq expected_value
   end
 end
