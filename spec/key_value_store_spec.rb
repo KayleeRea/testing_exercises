@@ -1,21 +1,16 @@
-
 require "rspec/core"
-
 require "key_value_store"
 
 describe KeyValueStore do
 
   it "Allows the user to add a value stored under a key." do
+    keyvalue = KeyValueStore.new
 
-  keyvalue = KeyValueStore.new("Flash", "Dog")
+    keyvalue.add("Flash", "Dog")
 
-  expected = {"Flash" => "Dog"}
+    expected_value = ["Dog"]
+    actual_value = keyvalue.get("Flash")
 
-  actual = keyvalue.add
-
-  expect(actual).to eq expected
-
+    expect(actual_value).to eq expected_value
   end
-  
-
 end
