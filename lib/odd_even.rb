@@ -10,6 +10,10 @@ class OddEven
 
     while i <= @number
       @array << i
+
+      if (i%2 == 0)
+        @array[i-1] = "even"
+      end
       i += 1
     end
     @array
