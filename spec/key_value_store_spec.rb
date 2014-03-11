@@ -12,5 +12,19 @@ describe KeyValueStore do
     actual_value = keyvalue.get("Flash")
 
     expect(actual_value).to eq expected_value
+
   end
+
+  it "Allows user to delete a single key" do
+    keyvalue = KeyValueStore.new
+
+    keyvalue.add("Flash", "Dog")
+
+    keyvalue.delete('Flash')
+
+    expected_value = nil
+    actual_value = keyvalue.delete("Flash")
+
+    expect(actual_value).to eq expected_value
+    end
 end
