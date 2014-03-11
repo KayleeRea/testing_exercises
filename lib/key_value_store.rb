@@ -23,4 +23,8 @@ class KeyValueStore
   def get_keys
     @store.keys
   end
+
+  def clear
+    @store.clear
+  end
 end

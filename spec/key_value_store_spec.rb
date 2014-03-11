@@ -55,4 +55,17 @@ describe KeyValueStore do
 
     expect(actual_value).to eq expected_value
   end
+
+  it "A user can clear a store which includes the key and the value" do
+    keyvalue = KeyValueStore.new
+
+    keyvalue.add("Flash", "Dog")
+    keyvalue.add("Fluffy", "Cat")
+    keyvalue.add("Kaylee", "Person")
+
+    expected_value = {}
+    actual_value = keyvalue.clear
+
+    expect(actual_value).to eq expected_value
+   end
 end
