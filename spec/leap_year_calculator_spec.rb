@@ -24,4 +24,5 @@ describe LeapYearCalc do
     expect(year.yes?(2000)).to eq true
     expect(year.yes?(1999)).to eq false
   end
+
 end
