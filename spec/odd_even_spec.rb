@@ -14,7 +14,7 @@ pending
   end
 
   it "If the number is even then the program will replace the number in the array with the text 'even'" do
-
+pending
   list_of_numbers = OddEven.new(10)
 
   expected_value = [1, "even", 3, "even", 5, "even", 7,"even", 9, "even"]
@@ -23,4 +23,13 @@ pending
   expect(actual_value).to eq expected_value
  end
 
+  it "If the number is even then the program will replace the number in the array with the text 'odd'" do
+
+    list_of_numbers = OddEven.new(10)
+
+    expected_value = ["odd", "even", "odd", "even", "odd", "even", "odd", "even", "odd", "even"]
+    actual_value = list_of_numbers.arrayit
+
+    expect(actual_value).to eq expected_value
+  end
 end

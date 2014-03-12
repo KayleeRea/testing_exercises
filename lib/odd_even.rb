@@ -13,6 +13,8 @@ class OddEven
 
       if (i%2 == 0)
         @array[i-1] = "even"
+      elsif (i%2 == 1)
+        @array[i-1] = "odd"
       end
       i += 1
     end
