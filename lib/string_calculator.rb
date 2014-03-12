@@ -1,5 +1,8 @@
 class StringCalculator
-    def add(str)
+  #def initialize(delimiter)
+    #@delimiter = (',')
+  end
+  def add(str)
       sum = 0
       @array_of_numbers = str.split(',')
       @array_of_numbers.each do |num|

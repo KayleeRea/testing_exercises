@@ -17,5 +17,8 @@ describe StringCalculator do
     expected_value = 10
 
     expect(string.add("1,2,7")).to eq expected_value
+
   end
+
+  #it "Initializes delimiter"
   end
