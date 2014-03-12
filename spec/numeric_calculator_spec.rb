@@ -32,4 +32,14 @@ describe NumericCalculator do
 
     expect(actual_value).to eq expected_value
   end
+
+  it "User can clear the memory and the output is 0" do
+
+    numbers = NumericCalculator.new
+
+    expected_value = 0
+    actual_value = numbers.clear
+
+    expect(actual_value).to eq expected_value
+  end
 end
