@@ -1,10 +1,10 @@
 class LeapYearCalc
 
   def yes?(year)
-   true
-  end
-
-  def no?(year)
-    false
+   if (year % 100 == 0 && year % 400 == 0)
+     true
+   else
+     false
+   end
   end
 end

@@ -14,6 +14,14 @@ describe LeapYearCalc do
 
     year = LeapYearCalc.new
 
-    expect(year.no?(1999)).to eq false
+    expect(year.yes?(1999)).to eq false
+  end
+
+  it "Leap years are divisble by 400 AND 100" do
+
+    year = LeapYearCalc.new
+
+    expect(year.yes?(2000)).to eq true
+    expect(year.yes?(1999)).to eq false
   end
 end
