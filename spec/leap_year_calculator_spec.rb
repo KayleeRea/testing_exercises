@@ -9,4 +9,11 @@ describe LeapYearCalc do
 
     expect(year.yes?(2000)).to eq true
   end
+
+  it "Tells the user if it is NOT a leap year" do
+
+    year = LeapYearCalc.new
+
+    expect(year.no?(1999)).to eq false
+  end
 end
