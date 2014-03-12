@@ -9,5 +9,13 @@ describe StringCalculator do
       expected_value = 0
 
       expect(string.add("")).to eq expected_value
-    end
+  end
+
+  it "Otherwise the method returns the sum of the numbers in the string" do
+    string = StringCalculator.new
+
+    expected_value = 10
+
+    expect(string.add("1,2,7")).to eq expected_value
+  end
   end
