@@ -12,17 +12,14 @@ describe KeyValueStore do
 
   end
 
-  it "Allows user to delete a single key" do
+  it "Allows user to delete and add a single key" do
     keyvalue = KeyValueStore.new
 
     keyvalue.add("Flash", "Dog")
 
     keyvalue.delete('Flash')
 
-    expected_value = nil
-    actual_value = keyvalue.delete("Flash")
-
-    expect(actual_value).to eq expected_value
+    expect(actual_value = keyvalue.delete('Flash')).to eq expected_value = nil
   end
 
   it "Allows user to add keys to the store" do
