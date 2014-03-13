@@ -29,12 +29,9 @@ describe KeyValueStore do
     keyvalue.add("Fluffy", "Cat")
     keyvalue.add("Kaylee", "Person")
 
-    expected_value = {"Flash" => "Dog",
-    "Fluffy" => "Cat",
-    "Kaylee" => "Person"}
-    actual_value = keyvalue.return
-
-    expect(actual_value).to eq expected_value
+    expect(actual_value = keyvalue.return).to eq expected_value = {"Flash" => "Dog",
+                                                                   "Fluffy" => "Cat",
+                                                                    "Kaylee" => "Person"}
   end
 
   it"Returns a list of keys from the store" do
@@ -44,10 +41,8 @@ describe KeyValueStore do
     keyvalue.add("Fluffy", "Cat")
     keyvalue.add("Kaylee", "Person")
 
-    expected_value = ["Flash", "Fluffy", "Kaylee"]
-    actual_value = keyvalue.get_keys
 
-    expect(actual_value).to eq expected_value
+    expect(actual_value = keyvalue.get_keys).to eq expected_value = ["Flash", "Fluffy", "Kaylee"]
   end
 
   it "A user can clear a store which includes the key and the value" do
@@ -57,9 +52,6 @@ describe KeyValueStore do
     keyvalue.add("Fluffy", "Cat")
     keyvalue.add("Kaylee", "Person")
 
-    expected_value = {}
-    actual_value = keyvalue.clear
-
-    expect(actual_value).to eq expected_value
+    expect(actual_value = keyvalue.clear).to eq expected_value = {}
    end
 end
