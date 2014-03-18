@@ -15,7 +15,7 @@ class Logger
     @array.push(line)
 
 
-    if @array.length > 6
+    if @array.length > 5
       nil
     else
       File.open(@path, "w") do |x|
