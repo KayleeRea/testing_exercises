@@ -1,4 +1,3 @@
-
 class Logger
 
   def initialize(path)
@@ -15,9 +14,7 @@ class Logger
     @array.push(line)
 
 
-    if @array.length > 5
-      nil
-    else
+    if @array.length % 5 == 0
       File.open(@path, "w") do |x|
         @array.each do |line|
           x.puts line
